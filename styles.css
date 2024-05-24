@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("desert.png"); /* Fond commun pour toutes les chambres */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.room {
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, #f3d17b, #d4a54d, #946943), url('cadre6.jpg'); /* Dégradé de couleurs style égyptien avec trois couleurs et une image de fond */
+  background-size: cover; /* Ajuste la taille de l'image de fond pour couvrir tout le cadre */
+  border: 10px solid transparent; /* Utilisation d'une bordure transparente */
+  border-radius: 30px; /* Arrondissement des coins */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.room::after {
+  content: "";
+  background-image: url('chercheur.png'); /* Ajout de l'image chercheur.png */
+  background-size: cover;
+  position: absolute;
+  width: 200px; /* Taille de l'image */
+  height: 200px; /* Taille de l'image */
+  top: 50%; /* Positionnement vertical au milieu */
+  right: -90px; /* Déplacement plus à droite */
+  transform: translate(50%, -50%); /* Ajustement pour centrer l'image */
+  border-radius: 50%; /* Pour un aspect arrondi */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+}
+
+
+
+
+
+
+
+.code-input {
+  margin-top: 20px;
+}
+
+.code-input label {
+  font-weight: bold;
+}
+
+.code-input input {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.code-input button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+@keyframes vent {
+  0% { opacity: 0; transform: translateY(-50px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(50px); }
+}
+
+.texte-vent {
+  animation: vent 5s ease infinite; /* L'animation se répète indéfiniment */
+}
+

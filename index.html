@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction au jeu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="room" id="room1">
+
+    <h1 class="texte-vent">Les Secrets de l'Égypte Ancienne </h1>
+
+    <br>Vous avez été convoqué pour une mission palpitante au cœur des mystères de l'Égypte ancienne.
+     Vous devez percer les secrets enfouis depuis des millénaires dans une pyramide
+     antique.</br>
+
+    <br>Plongez dans l'atmosphère envoûtante de l'Égypte ancienne, entre les vestiges majestueux et les mystères énigmatiques qui défient l'entendement humain.
+    Êtes-vous prêts à affronter les défis ancestraux et à percer les secrets perdus depuis des siècles ? </br>
+
+    <audio autoplay>
+      <source src="musique.mp3" type="audio/mp3">
+    </audio>
+
+
+    <br> <button id="boutonRedirection">Commencez l'aventure !</button>
+
+    <script>
+
+      // Sélection du bouton
+      const boutonRedirection = document.getElementById("boutonRedirection");
+
+      // Ajout d'un écouteur d'événements pour le clic sur le bouton
+      boutonRedirection.addEventListener("click", function() {
+        // Redirection vers la page souhaitée
+        window.location.href = "chambre 1.html";
+      });
+    </script> </br>
+  </div>
+</body>
+</html>

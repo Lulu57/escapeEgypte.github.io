@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("image2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.room {
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, #f3d17b, #d4a54d, #946943), url('cadre6.jpg');
+  background-size: cover;
+  border: 10px solid transparent;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.code-container {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 85%; /* Ajuster la position verticale */
+  right: -380px; /* Ajuster la position horizontale */
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 0, 0.021); /* Changer la couleur de la bordure en jaune */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-code {
+  display: none;
+  font-size: 24px;
+  color: red;
+}
+
+.code-input {
+  margin-top: 20px;
+}
+
+.code-input label {
+  font-weight: bold;
+}
+
+.code-input input {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.code-input button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.timer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 48px;
+  color: white;
+}

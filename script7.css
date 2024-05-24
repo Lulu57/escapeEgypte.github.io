@@ -1,0 +1,29 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+#screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Couleur de l'écran */
+    animation: vibration 0.1s infinite alternate; /* Animation de vibration */
+}
+
+.closed {
+    background-color: black; /* Couleur de l'écran après la fermeture */
+    animation: none; /* Arrêter l'animation de vibration */
+}
+
+@keyframes vibration {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(5px); /* Distance de vibration */
+    }
+}

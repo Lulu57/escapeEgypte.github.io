@@ -1,0 +1,70 @@
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    color: rgb(91, 158, 226);
+    font-size: 30px;
+    min-height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: red;
+}
+
+article {
+    background-image: url(images/al-khwarizmi.png);
+    background-repeat: no-repeat;
+    padding-left: 200px;
+    width: 80%;
+    border-style: solid;
+    border-color: skyblue;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    font-size: 30px;
+}
+
+p {
+    margin-left: 20%;
+}
+
+
+header a {
+    font-size: 10px;
+}
+a {
+  outline: none;
+ font-size: 20px;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #265301;
+}
+
+a:visited {
+  color: #437A16;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+a:hover {
+  border-bottom: 1px solid;     
+  background: #CDFEAA;
+}
+
+a:active {
+  background: #265301;
+  color: #CDFEAA;
+}

@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("image 7.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.room {
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, #f3d17b, #d4a54d, #946943), url('cadre6.jpg');
+  background-size: cover;
+  border: 10px solid transparent;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.code-input {
+  margin-top: 20px;
+}
+
+.code-input label {
+  font-weight: bold;
+}
+
+.code-input input {
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.code-input button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+@keyframes vent {
+  0% { opacity: 0; transform: translateY(-50px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(50px); }
+}
+
+.texte-vent {
+  animation: vent 5s ease infinite;
+}
+
+
+#symbols {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.symbol {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-image: url('symbol_placeholder.png'); /* Remplacer par les images des symboles égyptiens */
+  background-size: cover;
+  cursor: pointer;
+}
