@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chambre 3</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <div class="room" id="room5">
+    <h1>Chambre 3</h1>
+    <p>c'est bien trop facile non ?</p>
+    <br> 
+    <p>Attention !</p>
+    <p>Vous avez pénétré dans la dernière chambre, la "Chambre 3", mais c'est l'étape la plus difficile de toutes.</p>
+    <p>En effet, dès que vous êtes entrés, le mécanisme de la chambre a commencé à faire écrouler le plafond, et cela se produira dans 10 minutes. À la fin de ce compte à rebours, vous serez ensevelis sous les décombres.</p>
+    <p>Découvrez le code caché dans la boîte à votre droite et saisissez-le.</p>
+    <div class="code-container">
+      <div id="hidden-code" class="hidden-code">1663</div>
+    </div>
+    <div class="code-input">
+      <label for="code">Entrez le code</label>
+      <input type="text" id="code">
+      <button onclick="verifierCode()">Vérifier</button>
+    </div>
+    <div id="message"></div>
+    <div id="timer" class="timer"></div>
+  </div>
+  
+  <audio id="musique" autoplay>
+    <source src="dramatic.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    // Sélectionnez l'élément audio
+    var musique = document.getElementById("musique");
+
+    // Ajoutez un écouteur d'événements pour l'événement "ended"
+    musique.addEventListener('ended', function() {
+      // Réinitialisez le temps de lecture de la musique à zéro
+      this.currentTime = 0;
+      // Rejouez la musique
+      this.play();
+    }, false);
+
+    function verifierCode() {
+      var code = document.getElementById('code').value;
+      var message = document.getElementById('message');
+      if (code === '1663') {
+        message.textContent = 'Code correct ! Vous avez réussi !';
+        message.style.color = 'green';
+        clearInterval(countdown); // Arrêter le compte à rebours
+        setTimeout(function() {
+          window.location.href = "fin.html";
+        }, 4000);
+      } else {
+        message.textContent = 'Code incorrect. Réessayez.';
+        message.style.color = 'red';
+      }
+    }
+    
+    document.querySelector('.code-container').addEventListener('click', function() {
+      document.getElementById('hidden-code').style.display = 'block';
+    });
+
+    // Gestion du compte à rebours
+    let timeLeft = 600; // 10 minutes en secondes
+
+    function updateTimer() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      const timerDisplay = document.getElementById('timer');
+
+      if (timeLeft <= 60) {
+        timerDisplay.style.color = 'red'; // Vers 1 minute, le timer devient rouge
+        timerDisplay.style.fontWeight = 'bold'; // En gras
+      } else if (timeLeft % 2 === 0) {
+        timerDisplay.style.color = 'red'; // Une fois sur deux, le timer est en rouge
+        timerDisplay.style.fontWeight = 'normal'; // Normal
+      } else {
+        timerDisplay.style.color = 'white'; // Sinon, le timer est en blanc
+        timerDisplay.style.fontWeight = 'normal'; // Normal
+      }
+
+      timerDisplay.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+      timerDisplay.style.fontFamily = 'Egyptienne'; // Police spéciale égyptienne
+    }
+
+    updateTimer(); // Affiche le temps initial
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      updateTimer();
+
+      if (timeLeft === 0) {
+        clearInterval(countdown);
+        window.location.href = 'perdu2.html'; // Redirection vers la page de défaite
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

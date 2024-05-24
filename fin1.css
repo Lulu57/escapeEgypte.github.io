@@ -1,0 +1,124 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#animation-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#distortion {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('salle.png') center center/cover no-repeat; /* Remplacez l'URL de l'image par votre propre image */
+  animation: distortion-animation 4s ease-in-out forwards; /* Utilisation de ease-in-out pour créer l'effet d'image venant vers nous */
+}
+
+@keyframes distortion-animation {
+  0% {
+    transform: scale(1.2); /* L'image commence plus grande */
+    opacity: 0; /* L'opacité commence à zéro */
+  }
+  100% {
+    transform: scale(1); /* L'image revient à sa taille normale */
+    opacity: 1; /* L'opacité devient complètement visible */
+  }
+}
+
+#black-screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  animation: black-screen-animation 0.5s 4s forwards;
+}
+
+@keyframes black-screen-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background-color: black;
+  }
+}
+
+#message-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  animation: fade-in 0.5s 4.5s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.restart-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: button-fade-in 1s 7s forwards;
+}
+
+.restart-button a {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes button-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#message {
+  color: red;
+  font-size: 50px; /* Taille de la police par défaut */
+  font-family: 'Cinzel', serif; /* Police avec un style égyptien */
+}
+
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Assure que les confettis apparaissent au-dessus de tout le reste */
+}
+
+#confetti-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pour remplir complètement le conteneur avec l'image */
+}

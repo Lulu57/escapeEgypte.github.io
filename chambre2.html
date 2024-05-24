@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chambre 2</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="room" id="room4">
+    <h1>𝕮𝖍𝖆𝖒𝖇𝖗𝖊 2</h1>
+    <p> Vous trouvez une vieille table en bois sur laquelle repose une énigme écrite à la main :</p>
+    <blockquote>
+      "Qu'est-ce qui a 4 pattes le matin, 2 le midi et 3 le soir ?"
+    </blockquote>
+    <p>Trouvez la réponse à cette énigme pour avancer vers la prochaine étape.</p>
+    <input type="text" id="answer" placeholder="Votre réponse">
+    <button id="checkAnswer">Vérifier la réponse</button>
+    <p id="solution"></p>
+    <a href="chambre1.html">Retourner à la Chambre 1</a>
+  </div>
+
+    <audio autoplay>
+  <source src="musiquefond.mp3" type="audio/mp3">
+</audio>
+
+<script>
+// Sélectionnez l'élément audio
+var musique = document.getElementById("musique");
+
+// Ajoutez un écouteur d'événements pour l'événement "ended"
+musique.addEventListener('ended', function() {
+    // Réinitialisez le temps de lecture de la musique à zéro
+    this.currentTime = 0;
+    // Rejouez la musique
+    this.play();
+}, false);
+</script>
+  
+  <script src="script2.js"></script>
+</body>
+</html>

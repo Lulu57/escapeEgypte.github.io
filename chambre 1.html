@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chambre 1</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="room" id="room3">
+    <h1>𝕮𝖍𝖆𝖒𝖇𝖗𝖊 1</h1>
+    <p> </p>
+    <blockquote>
+      "Pour ouvrir ce coffre, vous devez compléter la phrase suivante en choisissant les mots manquants parmi les options suivantes :<br>
+      <br>
+      Phrase : "La __________ est la clé du __________."<br>
+      <br>
+      La chambre ne vous as laissées que ça comme indices :
+	  <br>
+	  Obscurité énigmatique 
+	  <br>
+	  Options :
+      <ol>
+        <li>vérité - secret</li>
+        <li>lumière - mystère</li>
+        <li>courage - destin</li>
+        <li>connaissance - succès</li>
+        <li>sagesse - bonheur</li>
+      </ol>
+    </blockquote>
+    <p>Choisissez les mots manquants pour ouvrir le coffre :</p>
+    <select id="word1">
+      <option value="">Choisissez le premier mot</option>
+      <option value="vérité">vérité</option>
+      <option value="lumière">lumière</option>
+      <option value="courage">courage</option>
+      <option value="connaissance">connaissance</option>
+      <option value="sagesse">sagesse</option>
+    </select>
+    <select id="word2">
+      <option value="">Choisissez le deuxième mot</option>
+      <option value="secret">secret</option>
+      <option value="mystère">mystère</option>
+      <option value="destin">destin</option>
+      <option value="succès">succès</option>
+      <option value="bonheur">bonheur</option>
+    </select>
+    <button id="checkSolution">Vérifier la solution</button>
+    <p id="solution"></p>
+    <a href="index.html">Retourner à l'Introduction</a>
+  </div>
+
+    <audio autoplay>
+  <source src="desert music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+// Sélectionnez l'élément audio
+var musique = document.getElementById("musique");
+
+// Ajoutez un écouteur d'événements pour l'événement "ended"
+musique.addEventListener('ended', function() {
+    // Réinitialisez le temps de lecture de la musique à zéro
+    this.currentTime = 0;
+    // Rejouez la musique
+    this.play();
+}, false);
+</script>
+  
+  <script src="script1.js"></script>
+</body>
+</html>
