@@ -31,7 +31,7 @@ body {
   top: 85%; /* Ajuster la position verticale */
   right: -380px; /* Ajuster la position horizontale */
   cursor: pointer;
-  border: 2px solid rgba(255, 255, 0, 0.021); /* Changer la couleur de la bordure en jaune */
+  border: 2px solid rgba(255, 255, 0, 0.087); /* Changer la couleur de la bordure en jaune */
   display: flex;
   justify-content: center;
   align-items: center;
